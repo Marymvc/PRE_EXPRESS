@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PresupuestoExpress</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="pagina-login">
+  <div class="panel-plano">
+    <div class="marca">PresupuestoExpress</div>
+    <div class="frase">Presupuestos de obra, calculados en minutos.</div>
+    <div class="pie">Catálogo reutilizable · cálculo automático por partida</div>
+  </div>
+
+  <div class="panel-formulario">
+    <div class="tarjeta-form">
+
+      <div class="tabs">
+        <button id="tabLogin" class="activo" type="button">Iniciar sesión</button>
+        <button id="tabRegistro" type="button">Crear cuenta</button>
+      </div>
+
+      <!-- Login -->
+      <form id="formLogin">
+        <h1>Bienvenida de vuelta</h1>
+        <div class="subtitulo">Ingresa a tu cuenta para seguir con tus presupuestos.</div>
+        <div class="error-msg" id="errorLogin"></div>
+
+        <div class="campo">
+          <label for="loginEmail">Correo</label>
+          <input type="email" id="loginEmail" required autocomplete="email" />
+        </div>
+        <div class="campo">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" required autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn-primario" style="width:100%">Iniciar sesión</button>
+      </form>
+
+      <!-- Registro -->
+      <form id="formRegistro" style="display:none">
+        <h1>Crea tu cuenta</h1>
+        <div class="subtitulo">Empieza a armar presupuestos en minutos.</div>
+        <div class="error-msg" id="errorRegistro"></div>
+
+        <div class="campo">
+          <label for="regNombre">Nombre completo</label>
+          <input type="text" id="regNombre" required autocomplete="name" />
+        </div>
+        <div class="campo">
+          <label for="regEmail">Correo</label>
+          <input type="email" id="regEmail" required autocomplete="email" />
+        </div>
+        <div class="campo">
+          <label for="regPassword">Contraseña</label>
+          <input type="password" id="regPassword" required minlength="6" autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn-primario" style="width:100%">Crear cuenta</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

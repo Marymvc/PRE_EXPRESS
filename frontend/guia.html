@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PresupuestoExpress — Guía de uso</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="topbar" id="topbar"></div>
+
+<div class="guia-hero">
+  <h1>¿Cómo funciona PresupuestoExpress?</h1>
+  <p>De tu catálogo de materiales y mano de obra a un presupuesto de obra calculado y listo para entregar, en minutos.</p>
+</div>
+
+<div class="guia-pasos">
+  <div class="guia-paso">
+    <div class="numero">1</div>
+    <h3>Arma tu catálogo</h3>
+    <p>En "Catálogo y nuevo presupuesto", agrega los ítems que usas seguido: descripción, partida (ej. M01), unidad y costo unitario. Quedan guardados para reutilizarlos en cualquier presupuesto futuro.</p>
+  </div>
+  <div class="guia-paso">
+    <div class="numero">2</div>
+    <h3>Arma un presupuesto</h3>
+    <p>En "Mis presupuestos", ponle nombre al proyecto y cliente, agrega filas eligiendo ítems de tu catálogo y la cantidad — el total se calcula solo, agrupado por partida, mientras lo armas.</p>
+  </div>
+  <div class="guia-paso">
+    <div class="numero">3</div>
+    <h3>Guarda y revisa el cálculo</h3>
+    <p>Al guardar, se calcula el subtotal por fila, el subtotal por partida, el total general y el total escrito en letras — igual que un cómputo métrico real.</p>
+  </div>
+  <div class="guia-paso">
+    <div class="numero">4</div>
+    <h3>Edita, elimina o descarga en PDF</h3>
+    <p>Cualquier presupuesto guardado se puede volver a abrir para agregar o quitar ítems, eliminar por completo, o descargar como PDF con formato formal de obra.</p>
+  </div>
+</div>
+
+<div class="guia-faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <details>
+    <summary>¿Puedo usar el mismo ítem en varios presupuestos?</summary>
+    <p>Sí — ese es justamente el objetivo del catálogo: cargas cada ítem una sola vez (con su costo unitario) y lo reutilizas en todos los presupuestos que quieras.</p>
+  </details>
+
+  <details>
+    <summary>¿Qué pasa si cambio el costo de un ítem en el catálogo?</summary>
+    <p>Los presupuestos que ya guardaste NO cambian — quedan con el costo que tenían al momento de guardarlos. Si quieres actualizarlos, edítalos manualmente desde "Mis presupuestos".</p>
+  </details>
+
+  <details>
+    <summary>¿Cómo se agrupan los ítems por partida?</summary>
+    <p>Por el campo "Partida" que le pones a cada ítem del catálogo (ej. "M01 · Obra gruesa"). Todos los ítems con la misma partida se agrupan y suman juntos, automáticamente.</p>
+  </details>
+
+  <details>
+    <summary>¿El PDF sirve para entregar al cliente?</summary>
+    <p>Sí, incluye el nombre del proyecto, el cliente, la fecha, el desglose completo por partida y el total en letras — el mismo formato de un presupuesto de obra formal.</p>
+  </details>
+</div>
+
+<div class="site-footer" id="footer"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/layout.js"></script>
+<script>
+  exigirSesion();
+  renderTopbar('guia');
+  renderFooter();
+</script>
+</body>
+</html>

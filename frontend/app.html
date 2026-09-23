@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PresupuestoExpress — Catálogo</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="topbar" id="topbar"></div>
+
+<div class="contenedor" style="max-width:640px">
+  <div class="seccion">
+    <div class="seccion-header">
+      <h2>Catálogo de ítems</h2>
+    </div>
+
+    <form id="formNuevoItem" class="form-item-nuevo">
+      <div class="full campo" style="margin-bottom:0">
+        <label for="itemNombre">Descripción</label>
+        <input type="text" id="itemNombre" placeholder="Ej. Colocado de carpeta" required />
+      </div>
+      <div class="campo" style="margin-bottom:0">
+        <label for="itemCategoria">Partida</label>
+        <input type="text" id="itemCategoria" placeholder="Ej. M01 · Terraza" required />
+      </div>
+      <div class="campo" style="margin-bottom:0">
+        <label for="itemUnidad">Unidad</label>
+        <input type="text" id="itemUnidad" placeholder="M2, GLB, PZA..." required />
+      </div>
+      <div class="full campo" style="margin-bottom:0">
+        <label for="itemCosto">Costo unitario (Bs)</label>
+        <input type="number" id="itemCosto" step="0.01" min="0" required />
+      </div>
+      <button type="submit" class="btn-primario full">Agregar al catálogo</button>
+    </form>
+
+    <div id="listaItems"><div class="vacio">Cargando catálogo…</div></div>
+  </div>
+</div>
+
+<div class="site-footer" id="footer"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/catalogo.js"></script>
+</body>
+</html>

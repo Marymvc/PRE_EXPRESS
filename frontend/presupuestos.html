@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PresupuestoExpress — Presupuestos</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="topbar" id="topbar"></div>
+
+<div class="contenedor">
+  <div class="grid-app">
+
+    <!-- Columna izquierda: armador / editor de presupuesto -->
+    <div>
+      <div class="seccion">
+        <div class="seccion-header">
+          <h2 id="tituloBuilder">Nuevo presupuesto</h2>
+          <button type="button" class="btn-texto" id="btnCancelarEdicion" style="display:none">Cancelar edición</button>
+        </div>
+
+        <div class="campo">
+          <label for="presupuestoNombre">Nombre del proyecto</label>
+          <input type="text" id="presupuestoNombre" placeholder="Ej. Remodelación Multifamiliar" />
+        </div>
+        <div class="campo">
+          <label for="presupuestoCliente">Cliente</label>
+          <input type="text" id="presupuestoCliente" placeholder="Ej. Omar Daza" />
+        </div>
+        
+        <div id="filasPresupuesto"><div class="vacio">Cargando catálogo…</div></div>
+
+        <button type="button" class="btn-secundario" id="btnAgregarFila" style="margin-top:0.6rem">+ Agregar fila</button>
+
+        <div class="total-box">
+          <div class="linea-total">
+            <span>Total</span>
+            <span class="monto" id="totalPreview">Bs 0.00</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primario" id="btnGuardarPresupuesto" style="width:100%; margin-top:1rem">
+          Guardar presupuesto
+        </button>
+      </div>
+    </div>
+
+    <!-- Columna derecha: presupuestos guardados -->
+    <div>
+      <div class="seccion">
+        <div class="seccion-header">
+          <h2>Mis presupuestos</h2>
+        </div>
+        <div id="listaPresupuestos"><div class="vacio">Cargando presupuestos…</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="site-footer" id="footer"></div>
+
+<!-- Generación de PDF, 100% en el navegador (sin backend nuevo) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/presupuestos.js"></script>
+</body>
+</html>
